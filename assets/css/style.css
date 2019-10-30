@@ -1,3 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
-    background-color: skyblue;
+    background: url("../images/bg.jfif") no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 28pt;
+    color: darkslateblue;
+    margin-left: 40px;
+    margin-top: 40px;
+    background:#e9ceee;
+    width: 336px;
+    padding: 30px;
+
+}
+
+button {
+    height: 80px;
+    width: 80px;
+}
+
+div {
+    margin: 40px;
 }
