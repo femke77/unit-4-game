@@ -1,5 +1,3 @@
-//$("#wins").append("1")
-
 
 $(document).ready(function() {
 
@@ -11,12 +9,32 @@ $(document).ready(function() {
     var numWins = 0;
     var numLosses = 0;
     var currentScore = 0;
-
    
     $(".gameGoal").append(gameNumber);
 
     $("#crystal-1").on("click", function() {
         $(this).val(crystal1);
+        currentScore += parseInt($(this).val());
+        $(".currentCount").text("Current score: " + currentScore);
+        checkWinLose();
+    });
+
+    $("#crystal-2").on("click", function() {
+        $(this).val(crystal2);
+        currentScore += parseInt($(this).val());
+        $(".currentCount").text("Current score: " + currentScore);
+        checkWinLose();
+    });
+
+    $("#crystal-3").on("click", function() {
+        $(this).val(crystal3);
+        currentScore += parseInt($(this).val());
+        $(".currentCount").text("Current score: " + currentScore);
+        checkWinLose();
+    });
+
+    $("#crystal-4").on("click", function() {
+        $(this).val(crystal4);
         currentScore += parseInt($(this).val());
         $(".currentCount").text("Current score: " + currentScore);
         checkWinLose();
@@ -30,16 +48,13 @@ $(document).ready(function() {
     
     function checkWinLose() {
         if (currentScore === gameNumber){
-            // numWins++;
             $("#wins").text("Wins: " + ++numWins);
             newGame();
         }
         else if (currentScore > gameNumber){
-            // numLosses++;
             $("#losses").text("Losses: " + ++numLosses);
             newGame();
-        }
-       
+        }      
     }
 
     function newGame(){
@@ -51,8 +66,6 @@ $(document).ready(function() {
         crystal2 = getRandom(1, 12);
         crystal3 = getRandom(1, 12);
         crystal4 = getRandom(1, 12);
-
-
     }
 
 });
