@@ -1,44 +1,41 @@
-//TODO: readme.md, styling and instructions, link to portfolio
+
 
 $(document).ready(function() {
 
-    var gameNumber = getRandom(19, 120);
-    var crystal1 = getRandom(1, 12);
-    var crystal2 = getRandom(1, 12);
-    var crystal3 = getRandom(1, 12);
-    var crystal4 = getRandom(1, 12);
+    var gameNumber;
+    var crystal1;
+    var crystal2;
+    var crystal3;
+    var crystal4;
     var numWins = 0;
     var numLosses = 0;
     var currentScore = 0;
    
-    $("#gameNumber").text(gameNumber);
+    newGame();
 
     $("#crystal-1").on("click", function() {
         $(this).val(crystal1);
-        currentScore += parseInt($(this).val());
-        $(".currentCount").text("Current score: " + currentScore);
-        checkWinLose();
+        currentScore += crystal1;
+        click();
     });
 
     $("#crystal-2").on("click", function() {
         $(this).val(crystal2);
-        currentScore += parseInt($(this).val());
-        $(".currentCount").text("Current score: " + currentScore);
-        checkWinLose();
+        currentScore += crystal2;
+        click();
     });
 
     $("#crystal-3").on("click", function() {
         $(this).val(crystal3);
-        currentScore += parseInt($(this).val());
-        $(".currentCount").text("Current score: " + currentScore);
-        checkWinLose();
+        currentScore += crystal3;
+        click();
     });
 
     $("#crystal-4").on("click", function() {
         $(this).val(crystal4);
-        currentScore += parseInt($(this).val());
-        $(".currentCount").text("Current score: " + currentScore);
-        checkWinLose();
+        currentScore += crystal4;
+        click();
+        
     });
 
 
@@ -47,13 +44,18 @@ $(document).ready(function() {
         return random;
     }
     
+    function click(){
+        $(".currentCount").text("Current score: " + currentScore);
+        checkWinLose();
+    }
+
     function checkWinLose() {
         if (currentScore === gameNumber){
-            $("#wins").text("Wins: " + ++numWins);
+            $("#wins").text("Wins: " + (++numWins));
             newGame();
         }
         else if (currentScore > gameNumber){
-            $("#losses").text("Losses: " + ++numLosses);
+            $("#losses").text("Losses: " + (++numLosses));
             newGame();
         }      
     }
