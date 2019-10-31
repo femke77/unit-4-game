@@ -5,16 +5,18 @@
 body {
     background: url("../images/bg.jfif") no-repeat;
     background-size: cover;
+    color: darkslateblue;
+    font-family: 'Comfortaa', cursive;
 }
 
 h1 {
-    font-size: 28pt;
-    color: darkslateblue;
-    margin-left: 40px;
+    font-size: 28pt;  
+    margin-left: 20px;
     margin-top: 40px;
     background:#e9ceee;
-    width: 336px;
+    width: 390px;
     padding: 30px;
+    
 
 }
 
@@ -24,5 +26,68 @@ button {
 }
 
 div {
-    margin: 40px;
+    margin: 20px;
+}
+
+#crystal-1{
+    background-image: url("../images/hem.jfif");
+}
+
+#crystal-2{
+    background-image: url("../images/lab.jfif");
+}
+
+#crystal-3{
+    background-image: url("../images/mal.jfif");
+}
+
+#crystal-4{
+    background-image: url("../images/tour.jfif");
+}
+
+.gameGoal {
+    float: left;
+    background:#e9ceee;
+    height: 100px;
+    width: 220px;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 15px;  
+    
+}
+
+#gameNumber {
+    font-weight: bold;
+}
+
+.scoring {
+    float: left;
+    height: 110px;
+    width: 180px;
+    background:#e9ceee;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 5px 0px 0px 5px;
+}
+
+.crystals{
+    clear: both;
+    height: 100px;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.currentCount {
+    height: 70px;
+    width: 250px;
+    background:#e9ceee;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.instructions {
+    line-height: 30px;
+    font-size: 20px;
 }

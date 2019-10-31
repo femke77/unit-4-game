@@ -8,24 +8,26 @@
     <title>Crystal Collector</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <h1>Crystal Collector</h1>
     <div class="instructions">
-        <p>
-            Instructions
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ut amet praesentium illo, deleniti non
-            blanditiis asperiores tenetur ab? Earum deleniti quisquam ratione aliquam eligendi quasi a ipsa impedit sed.
+        <p>Instructions : </p>
+        <p>Click each crystal below to discover its point value. Use the various crystals to match the game number value. 
+            If you match, you win! If you exceed the game number, you lose, and a new game number will appear. 
+
         </p>
     </div>
     <div class="gameGoal">
         <p>Game number: </p>
+        <section id="gameNumber"></section>
     </div>
     <div class="scoring">
         <p>Score</p>
-        <br/>
+        <br />
         <section id="wins">
             Wins:
         </section>
@@ -35,13 +37,14 @@
 
     </div>
     <div class="crystals">
-        <button id="crystal-1" class="crystal" value=0></button>
-        <button id="crystal-2" class="crystal" value=0></button>
-        <button id="crystal-3" class="crystal" value=0></button>
-        <button id="crystal-4" class="crystal" value=0></button>
+      
+        <button id="crystal-1" type="button"></button>
+        <button id="crystal-2" type="button"></button>
+        <button id="crystal-3" type="button"></button>
+        <button id="crystal-4" type="button"></button>
     </div>
     <div class="currentCount">
-        <p>Current Score: </p>
+        <p>Current score: 0</p>
 
     </div>
 

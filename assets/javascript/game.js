@@ -1,3 +1,4 @@
+//TODO: readme.md, styling and instructions, link to portfolio
 
 $(document).ready(function() {
 
@@ -10,7 +11,7 @@ $(document).ready(function() {
     var numLosses = 0;
     var currentScore = 0;
    
-    $(".gameGoal").append(gameNumber);
+    $("#gameNumber").text(gameNumber);
 
     $("#crystal-1").on("click", function() {
         $(this).val(crystal1);
@@ -61,7 +62,7 @@ $(document).ready(function() {
         currentScore = 0;
         $(".currentCount").text("Current score: " + currentScore);
         gameNumber = getRandom(19, 120);
-        $(".gameGoal").text(gameNumber);
+        $("#gameNumber").text(gameNumber);
         crystal1 = getRandom(1, 12);
         crystal2 = getRandom(1, 12);
         crystal3 = getRandom(1, 12);
