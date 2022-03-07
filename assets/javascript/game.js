@@ -52,12 +52,11 @@ $(document).ready(function() {
     function checkWinLose() {
         if (currentScore === gameNumber){
             $("#wins").text("Wins: " + (++numWins));
-            newGame();
         }
         else if (currentScore > gameNumber){
             $("#losses").text("Losses: " + (++numLosses));
-            newGame();
-        }      
+        }     
+        newGame(); 
     }
 
     function newGame(){
